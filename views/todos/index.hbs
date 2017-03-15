@@ -1,0 +1,10 @@
+<h1> Todos </h1>
+<ul>
+  {{#each todos}}
+    <li><span>Description:</span> <a href="/todos/{{@index}}">{{description}}</a></li>
+    <li><span>Urgent:</span> {{urgent}}</li>
+    <br>
+  {{/each}}
+</ul>
+
+<a class="btn btn-default" href="\todos\new">Add a New Todo</a>

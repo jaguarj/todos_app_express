@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <form action="/todos" method="POST">
+        <div class="form-group">
+          <label for="description">description:</label>
+          <input type="text" name="description" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="urgent">urgent:</label>
+          <label class="radio-inline">
+            <input type="radio" name="urgent" value="true" checked> yes
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="urgent" value="false"> no
+          </label>
+        </div>
+        <div>
+          <input class="btn btn-default" type="submit" value="Add Todo">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
