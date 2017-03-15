@@ -1,23 +1,23 @@
-<h1>Add a New Todo</h1>
+<h1>Edit You Todo</h1>
 <div class="container">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <form action="/todos" method="POST">
+      <form action="/todos/{{todo.id}}?_method=PUT" method="POST">
         <div class="form-group">
           <label for="description">description:</label>
-          <input type="text" name="description" class="form-control">
+          <input type="text" name="description" class="form-control" value="{{todo.description}}">
         </div>
         <div class="form-group">
           <label for="urgent">urgent:</label>
           <label class="radio-inline">
-            <input type="radio" name="urgent" value="true" checked> yes
+            <input type="radio" name="urgent" value="{{todo.urgent}}"> yes
           </label>
           <label class="radio-inline">
-            <input type="radio" name="urgent" value="false"> no
+            <input type="radio" name="urgent" value="{{!todo.urgent}}"> no
           </label>
         </div>
         <div>
-          <input class="btn btn-default" type="submit" value="Add Todo">
+          <input class="btn btn-default" type="submit" value="Submit Changes">
         </div>
       </form>
     </div>

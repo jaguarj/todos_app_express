@@ -10,6 +10,7 @@ h1 {
 ul {
     margin-top: 30px;
     list-style-type: none;
+    padding-left: 0px;
 }
 
 span {
@@ -17,5 +18,9 @@ span {
 }
 
 .btn.btn-default, .btn.btn-link {
-    margin-top: 20px;
+    margin: 20px 0px;
+}
+
+.btn.btn-danger {
+    margin: 0px 0px 20px;
 }

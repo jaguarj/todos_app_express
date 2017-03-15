@@ -3,7 +3,10 @@
   {{#each todos}}
     <li><span>Description:</span> <a href="/todos/{{@index}}">{{description}}</a></li>
     <li><span>Urgent:</span> {{urgent}}</li>
-    <br>
+    <div><a class="btn btn-default" href="/todos/{{@index}}/edit">Edit</a></div>
+    <form action="/todos/{{@index}}?_method=DELETE" method="POST">
+        <input class="btn btn-danger" type="submit" value="DELETE"/>
+    </form>
   {{/each}}
 </ul>
 
